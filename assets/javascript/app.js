@@ -19,34 +19,32 @@ $(document).ready(function () {
 
             var results = response.data;
 
-          for (var i = 0; i < results.length; i++) {
+            for (var i = 0; i < results.length; i++) {
 
-            if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+                if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
-              var animalDiv = $("<div>");
-              animalDiv.addClass("gif-container");
+                    var animalDiv = $("<div>");
+                    animalDiv.addClass("gif-container");
 
-              var rating = results[i].rating;
-              var animatedGif = results[i].images.fixed_height.url;
-              var staticGif = results[i].images.fixed_height_still.url;
-              var imageTag = $("<img>");
-              var paragraphTag = $("<p>").text("Rating: " + rating);
+                    var rating = results[i].rating;
+                    var animatedGif = results[i].images.fixed_height.url;
+                    var staticGif = results[i].images.fixed_height_still.url;
+                    var imageTag = $("<img>");
+                    var paragraphTag = $("<p>").text("Rating: " + rating);
 
-              imageTag.attr("src", staticGif);
-              imageTag.attr("data-state", "still");
-              imageTag.attr("data-still", staticGif);
-              imageTag.attr("data-animate", animatedGif);
-              animalDiv.append(paragraphTag);
-              animalDiv.append(imageTag);
-              $("#gif-display").prepend(animalDiv);
+                    imageTag.attr("src", staticGif);
+                    imageTag.attr("data-state", "still");
+                    imageTag.attr("data-still", staticGif);
+                    imageTag.attr("data-animate", animatedGif);
+                    animalDiv.append(paragraphTag);
+                    animalDiv.append(imageTag);
+                    $("#gif-display").prepend(animalDiv);
+                }
             }
-          }
         })
     };
 
-    $(document).on("click", ".animal-button", function () {
-        displayGiphs();
-    })
+    $(document).on("click", ".animal-button", displayGiphs);
 
 
     function renderButtons() {
