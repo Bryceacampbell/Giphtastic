@@ -19,10 +19,8 @@ $(document).ready(function () {
 
             var results = response.data;
 
-       
           for (var i = 0; i < results.length; i++) {
 
- 
             if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
               var animalDiv = $("<div>");
@@ -35,7 +33,6 @@ $(document).ready(function () {
               var paragraphTag = $("<p>").text("Rating: " + rating);
 
               imageTag.attr("src", staticGif);
-
               imageTag.attr("data-state", "still");
               imageTag.attr("data-still", staticGif);
               imageTag.attr("data-animate", animatedGif);
@@ -44,9 +41,6 @@ $(document).ready(function () {
               $("#gif-display").prepend(animalDiv);
             }
           }
-
-
-
         })
     };
 
@@ -62,30 +56,22 @@ $(document).ready(function () {
         for (var i = 0; i < topics.length; i++) {
 
             var animalButton = $("<button>");
-
             animalButton.addClass("animal-button");
-
             animalButton.attr("data-name", topics[i]);
-
             animalButton.text(topics[i]);
-
             $("#animal-display").append(animalButton);
+
         }
     };
 
     $("#add-button").on("click", function (event) {
 
         event.preventDefault();
-
         var newAnimal = $("#animal-input").val().trim();
-
         topics.push(newAnimal);
-
         renderButtons();
+
     });
-
-
-
 
     renderButtons();
 
