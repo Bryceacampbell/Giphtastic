@@ -1,3 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #cec375;
+    
+}
+header {
+    margin: 20px;
+    padding: 20px;
+    background: #301472;
+    color: #ffffff;
+}
 .gif-container {
     width: auto;
     float: left;

@@ -8,20 +8,28 @@
     <title>Giphtastic</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-    <div id="animal-display"></div>
+    <header class="container text-center">
+        <h1>Animal Giph Generator</h1>
 
-    <form id="animal-form">
-        <label for="animal-input"></label>
-        <input type="input" id="animal-input">
-        <input type="submit" id="add-button" value="Add Animal">
-    </form>
+    </header>
+
+    <div class="container text-center">
+        <div id="button-display"></div>
+
+        <form id="animal-form">
+            <label for="animal-input"></label>
+            <input type="input" id="animal-input">
+            <input type="submit" id="add-button" value="Add Animal">
+        </form>
+    </div>
 
     <div class="container-fluid">
         <div id="gif-display"></div>
