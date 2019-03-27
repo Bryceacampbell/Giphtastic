@@ -95,7 +95,7 @@ $(document).ready(function () {
         for (var i = 0; i < topics.length; i++) {
 
             var animalButton = $("<button>");
-            animalButton.addClass("animal-button");
+            animalButton.addClass("btn animal-button");
             animalButton.attr("data-name", topics[i]);
             animalButton.text(topics[i]);
             $("#button-display").append(animalButton);
